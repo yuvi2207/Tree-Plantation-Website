@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plantation Event</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>ExploreIt 🌱</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+    </div>
+</nav>
+
+<section class="hero small-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>🌿 Tree Plantation Drive</h1>
+    </div>
+</section>
+
+<div class="container">
+
+<!-- 🌿 EVENT -->
+<section class="event-card">
+
+<h2>🌱 Plantation Event Details</h2>
+
+<p>
+Join our tree plantation drive and help make the environment greener.
+</p>
+
+<!-- 📘 LEARNING -->
+<div class="event-grid">
+
+    <div class="event-box clickable" onclick="showInfo('about')">
+        <h3>🌳 About Trees</h3>
+    </div>
+
+    <div class="event-box clickable" onclick="showInfo('importance')">
+        <h3>🌍 Importance</h3>
+    </div>
+
+    <div class="event-box clickable" onclick="showInfo('plant')">
+        <h3>🌱 How to Plant</h3>
+    </div>
+
+</div>
+
+<div id="treeInfo" class="info-box"></div>
+
+<!-- 📅 EVENT FORM -->
+<div class="event-grid">
+
+    <div class="event-box">
+        <h3>📍 Location</h3>
+        <p>Pune, Maharashtra</p>
+    </div>
+
+    <div class="event-box">
+        <h3>📅 Date</h3>
+        <input type="date" id="eventDate">
+    </div>
+
+    <div class="event-box">
+        <h3>🕒 Time</h3>
+        <input type="time" id="eventTime">
+    </div>
+
+    <div class="event-box">
+        <h3>👥 Participants</h3>
+        <input type="number" id="participants">
+    </div>
+
+</div>
+
+<button class="btn glow-btn" onclick="registerEvent()">Join Event</button>
+
+<div id="successMsg" class="success-box"></div>
+
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 ExploreIt 🌍</p>
+</footer>
+
+<script src="openmodal.js"></script>
+
+</body>
+</html>

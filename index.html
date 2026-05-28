@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExploreIt</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="glass-nav">
+    <h2>ExploreIt 🌱</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="login.html" class="nav-btn">Login</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="overlay"></div>
+
+    <!-- 🌿 LEAF ANIMATION -->
+    <div class="leaf-bg">
+        <span>🍃</span>
+        <span>🍃</span>
+        <span>🍃</span>
+        <span>🍃</span>
+        <span>🍃</span>
+    </div>
+
+    <div class="hero-content">
+        <h1>Plant Today 🌱<br>Save Tomorrow</h1>
+        <p>Join ExploreIt and make Earth greener</p>
+        <button class="btn glow-btn">Get Started</button>
+        <button class="btn glow-btn">Explore Now</button>
+    </div>
+</section>
+
+<div class="container">
+
+<!-- ABOUT -->
+<section id="about" class="fade-in">
+
+    <h2>About ExploreIt</h2>
+
+    <div class="about-box glass-card">
+        <p>
+            ExploreIt is a student-driven initiative focused on sustainability,
+            environmental awareness, and eco-friendly living.
+        </p>
+
+        <p>
+            We inspire people to take small actions like tree plantation,
+            recycling, and green activities to build a better future.
+        </p>
+
+        <button class="btn glow-btn" onclick="window.location.href='join.html'">
+    Join Mission 🌱
+</button>
+    </div>
+
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="fade-in">
+    <h2>Our Activities</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌍 Awareness</h3>
+            <p>Educating people about climate change.</p>
+        </div>
+
+        <div class="card plantation-card" onclick="window.location.href='plantation.html'">
+            <h3>🌱 Plantation</h3>
+            <p>Join tree plantation drives.</p>
+        </div>
+
+        <div class="card" onclick="window.location.href='recycle.html'">
+            <h3>♻️ Recycling</h3>
+            <p>Promoting waste management.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- EXTRA SECTION (LIKE PLANTATION STYLE) -->
+<section class="fade-in">
+    <h2>🌿 Why Join Us?</h2>
+
+    <div class="cards">
+
+    <div class="card clickable" onclick="window.location.href='air.html'">
+        <h3>🌿 Clean Air</h3>
+        <p>Improve air quality</p>
+    </div>
+
+    <div class="card clickable" onclick="window.location.href='nature.html'">
+        <h3>🌳 Save Nature</h3>
+        <p>Protect ecosystems</p>
+    </div>
+
+    <div class="card clickable" onclick="window.location.href='future.html'">
+        <h3>🌍 Better Future</h3>
+        <p>Secure next generation</p>
+    </div>
+
+</div>
+         <!-- POPUP -->
+    <div id="whyPopup" class="why-popup">
+        <div class="why-content">
+            <span class="close-btn" onclick="closeWhy()">×</span>
+            <p id="whyText"></p>
+        </div>
+    </div>
+
+    </div>
+
+
+   <button class="btn glow-btn" onclick="window.location.href='join.html'">
+    Join Now
+</button>
+</button>
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 ExploreIt 🌍</p>
+</footer>
+
+<!-- 🌿 SCROLL ANIMATION -->
+<script>
+const faders = document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll", () => {
+    faders.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if(rect < window.innerHeight - 100){
+            el.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>

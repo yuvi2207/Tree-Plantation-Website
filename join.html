@@ -1,0 +1,216 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join ExploreIt</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth-body">
+
+<div class="auth-container">
+
+    <h2>Join ExploreIt 🌿</h2>
+    
+    <div class="input-group">
+    <select id="purpose">
+        <option value="">Select Purpose</option>
+        <option value="shade">Shade</option>
+        <option value="fruit">Fruit</option>
+        <option value="oxygen">Oxygen</option>
+    </select>
+     <h3>🤖 AI Plant Assistant</h3>
+</div>
+
+<button class="btn glow-btn" onclick="suggestPlant()">Suggest Plant</button>
+
+<div id="result" class="info-box"></div>
+
+     NAME -->
+    <!-- <div class="input-group">
+        <input type="text" placeholder="Full Name" id="name" required>
+    </div> -->
+
+    <!-- EMAIL -->
+    <!-- <div class="input-group">
+        <input type="email" placeholder="Email Address" id="email" required>
+    </div> -->
+
+    <!-- PHONE -->
+    <!-- <div class="input-group">
+        <input type="tel" placeholder="Phone Number" id="phone" required>
+    </div> -->
+
+    <!-- DOB -->
+    <!-- <div class="input-group">
+        <input type="date" id="dob" required>
+    </div> -->
+
+    <!-- ACTIVITY SELECTION -->
+    <!-- <div class="input-group">
+        <select id="activity">
+            <option value="">Select Activity</option>
+            <option value="Plantation">🌱 Plantation</option>
+            <option value="Recycling">♻️ Recycling</option>
+            <option value="Awareness">🌍 Awareness</option>
+        </select>
+    </div> -->
+
+    <!-- BUTTON -->
+    <!-- <button class="btn glow-btn" onclick="submitForm()">Join Now</button> -->
+
+    <!-- BACK -->
+    <!-- <p class="auth-text">
+        <a href="index.html">← Back to Home</a>
+    </p> -->
+
+<!-- </div>
+
+<script>
+
+function submitForm(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let dob = document.getElementById("dob").value;
+    let activity = document.getElementById("activity").value;
+
+    if(name === "" || email === "" || phone === "" || dob === "" || activity === ""){
+        alert("Please fill all fields!");
+        return;
+    }
+
+    alert(`✅ ${name}, you have joined ${activity} successfully!`);
+}
+
+</script>
+
+</body>
+</html> --> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join ExploreIt</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth-body">
+
+<div class="auth-container">
+
+    <h2>Join ExploreIt 🌿</h2>
+
+    <!-- FORM -->
+    <div class="input-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+    </div>
+
+    <div class="input-group">
+        <input type="email" id="email" placeholder="Email Address" required>
+    </div>
+
+    <div class="input-group">
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+    </div>
+
+    <div class="input-group">
+        <input type="date" id="dob" required>
+    </div>
+
+    <!-- ACTIVITY -->
+    <div class="input-group">
+        <select id="activity">
+            <option value="">Select Activity</option>
+            <option value="Plantation">🌱 Plantation</option>
+            <option value="Recycling">♻️ Recycling</option>
+            <option value="Awareness">🌍 Awareness</option>
+        </select>
+    </div>
+
+    <!-- JOIN BUTTON -->
+    <button type="button" class="btn glow-btn" onclick="submitForm()">
+        Join Now
+    </button>
+
+    <hr style="margin:20px 0;">
+
+    <!-- 🤖 AI SECTION -->
+    <h3>🤖 AI Plant Assistant</h3>
+
+    <div class="input-group">
+        <select id="purpose">
+            <option value="">Select Purpose</option>
+            <option value="shade">🌳 Shade</option>
+            <option value="fruit">🥭 Fruit</option>
+            <option value="oxygen">🌿 Oxygen</option>
+        </select>
+    </div>
+
+    <button type="button" class="btn glow-btn" onclick="suggestPlant()">
+        Suggest Plant
+    </button>
+
+    <!-- RESULT -->
+    <div id="result" class="info-box"></div>
+
+    <p class="auth-text">
+        <a href="index.html">← Back to Home</a>
+    </p>
+
+</div>
+
+<!-- ✅ SCRIPT (VERY IMPORTANT) -->
+<script>
+
+/* FORM SUBMIT */
+function submitForm(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let dob = document.getElementById("dob").value;
+    let activity = document.getElementById("activity").value;
+
+    if(name === "" || email === "" || phone === "" || dob === "" || activity === ""){
+        alert("⚠ Please fill all fields!");
+        return;
+    }
+
+    alert(`✅ ${name}, you successfully joined ${activity}!`);
+}
+
+/* 🤖 AI SUGGESTION */
+function suggestPlant(){
+    let purpose = document.getElementById("purpose").value;
+    let result = document.getElementById("result");
+
+    if(purpose === ""){
+        result.innerHTML = "⚠ Please select a purpose first!";
+        return;
+    }
+
+    let suggestion = "";
+
+    if(purpose === "shade"){
+        suggestion = "🌳 Banyan Tree – Provides dense shade and lives long.";
+    }
+    else if(purpose === "fruit"){
+        suggestion = "🥭 Mango Tree – Gives fruit and grows well in India.";
+    }
+    else if(purpose === "oxygen"){
+        suggestion = "🌿 Neem Tree – Produces high oxygen and has medicinal benefits.";
+    }
+
+    result.innerHTML = "🤖 Suggestion: " + suggestion;
+}
+
+</script>
+
+</body>
+</html>
